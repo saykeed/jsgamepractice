@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#bigbody{
+    background: rgb(17, 6, 2);
+}
+
+
+
+#wrap{
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 700px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+#header p{
+    color: white;
+    margin: 0 0;
+}
+
+#header h3{
+    color: rgb(255, 196, 0);
+    margin: 0 0;
+}
+
+#interface{
+    margin-top: 20px;
+   
+}
+
+#interface a{
+    display: flex;
+    text-align: left;
+    height: auto;
+    text-decoration: none;
+}
+
+#avatar{
+    width: 220px;
+}
+
+#avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#fighter_info{
+    padding: 15px 20px;
+}
+
+#fighter_info h3{
+    color: rgb(255, 196, 0);
+    margin: 0 0;
+    
+}
+
+#fighter_info p{
+    font-size: 12px;
+    color: white;
+    margin: 0 0;
+}
+
+
+
+
+
+
+
+
+#interface a:hover{
+    background: rgb(114, 41, 72);
+}
+
+
+/*this design is for d second interface*/
+.fighter_avatar{
+    width: 100px;
+    height: auto;
+}
+
+.fighter_dashboard{
+    width: 100%;
+    text-align: left;
+    color: white;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: rgb(61, 29, 7);
+    
+}
+
+.fighter_dashboard p{
+    font-size: 10px;
+    margin: 0;
+
+}
+
+#pro_button{
+    background: rgba(0, 128, 0, 0.713);
+    color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 80%;
+    
+}
+
+#pro_button:hover{
+    background: green;
+    
+}
