@@ -32,22 +32,66 @@ let GameManager = {
         let getAction = document.querySelector("#action");
         let getArena = document.querySelector("#arena");
 
-        getHeader.innerHTML = '<h3>' + fighterType + ' is ready to fight</h3><p>Proceed to Select an opponent</p>';
-        getAction.innerHTML = '<button class="btn" id="pro_button" onclick="GameManager.setFight()">Select an opponent</button>'
+        getHeader.innerHTML = '<h3>' + fighterType + ' is ready to fight</h3><p>Click the button below to continue</p>';
+        getAction.innerHTML = '<button class="btn" id="pro_button" onclick="GameManager.setFight()">Select an opponent</button>';
 
     },
     setFight: function () {
+        
         let getHeader = document.querySelector("#header");
         let getAction = document.querySelector("#action");
         let getEnemy = document.querySelector("#enemy");
 
         //create enemy
+        let enemy0 = new Oppo("Goblin", 100, 0, 50, 100, 100);
+        let enemy1 = new Oppo("Troll", 200, 0, 150, 80, 150);
+        let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(2));
 
+        switch (chooseRandomEnemy) {
+            case 0:
+                opponent = enemy0;
+                break;
+            case 1:
+                opponent = enemy1;
+                break;
+        }
         
+        getHeader.innerHTML = '<h3>Show the Enemy what you got!!</h3>';
+        getAction.innerHTML = '<button class="btn" id="pro_button" onclick="">Attack</button>';
+        getEnemy.innerHTML = '<img src="images/' + opponent.oppoType + '.jpg" class="opponent_avatar"><div class="fighter_dashboard"><h3>' + opponent.oppoType + '</h3><p>Health: ' + opponent.health + '</p><p>Mana: ' + opponent.mana + '</p><p>Strength: ' + opponent.strength + '</p><p>Agility: ' + opponent.agility + '</p><p>Speed: ' + opponent.speed + '</p></div>';
 
     }
 
 }
 
 
+/*
 
+setFight: function () {
+        let getHeader = document.querySelector("#header");
+        let getAction = document.querySelector("#action");
+        let getEnemy = document.querySelector("#enemy");
+
+        //create enemy
+        let enemy00 = new Oppo("Goblin", 100, 0, 50, 100, 100);
+        let enemy01 = new Oppo("Troll", 200, 0, 150, 80, 150);
+        let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(2));
+        console.log(chooseRandomEnemy);
+
+
+
+         switch (chooseRandomEnemy) {
+            case 0:
+                let opponent = enemy0;
+                break;
+            case 1:
+                let opponent = enemy1;
+                break;
+            
+        }
+
+        getHeader.innerHTML = '<p>Show the Enemy what you got!!</p>';
+
+    }
+
+*/
